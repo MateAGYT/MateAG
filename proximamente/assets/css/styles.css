@@ -179,3 +179,7 @@ section {
 .navbar a.active::after {
     width: 40%;
 }
+
+.footer-text p {
+    font-size: 1.6rem;
+}

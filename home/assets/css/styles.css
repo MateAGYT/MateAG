@@ -173,23 +173,6 @@ span {
     box-shadow: 0 0 1rem var(--main-color);
 }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--second-bg-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
-}
-
-.btn:hover {
-    box-shadow: none;
-}
-
 .about {
     display: flex;
     justify-content: center;
@@ -549,4 +532,154 @@ text {
         text-align: center;
         margin-top: 2rem;
     }
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 70rem;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+.skill-bar-box {
+    margin-bottom: 2.5rem;
+}
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.skill-info span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.progress-line {
+    position: relative;
+    height: 1.2rem;
+    width: 100%;
+    background: #323946;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.progress-line span {
+    position: absolute;
+    height: 100%;
+    background: var(--bar-color, var(--main-color));
+    border-radius: 1rem;
+    transition: width 1s ease-in-out;
+}
+
+span {
+    --bar-color: #00ff44;
+}
+
+.services-container .services-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 4rem 2rem;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 255, 68, 0.2);
+    transform: translateY(-10px);
+}
+
+.services-box i {
+    background: linear-gradient(45deg, var(--main-color), #00a82d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 68, 0.3));
+}
+
+.services-box .price-tag {
+    display: block;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.services-box .price-tag span {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(0, 255, 68, 0.3);
+    margin: 0 0.5rem;
+}
+
+.header {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 1.2rem 5%;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.header.sticky {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+    background: rgba(2, 77, 36, 0.4);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.logo {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 68, 0.3);
+}
+
+.navbar {
+    display: flex;
+    gap: .5rem;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: #eee;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    background: rgba(0, 255, 68, 0.15);
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.3s;
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px var(--main-color);
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 40%;
 }
