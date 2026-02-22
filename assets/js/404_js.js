@@ -36,7 +36,9 @@ const jsonData = `{
     "version": "0.3.8"
   },
   "hint": "Usa la barra de navegación para volver a la página principal!"
-}`;
+}
+
+C:/USERS/MateAG/Desktop/MateAG_Web> `;
 
 function typeWriter(text, elementId, speed) {
     let i = 0;
