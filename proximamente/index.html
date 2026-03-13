@@ -13,14 +13,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="mateag.com" />
     <meta property="og:title" content="MateAG - Web Oficial" />
-    <meta property="og:description" content="MateAG es un creador de contenido, desarrollador, programador, gamer, entre muchos. Contiene +2.000 seguidores     sumando todas sus cifras de sus redes sociales oficiales..." />
+    <meta property="og:description" content="MateAG es un creador de contenido, desarrollador, programador, gamer, entre muchos. Contiene +2.000 seguidores      sumando todas sus cifras de sus redes sociales oficiales..." />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="mateag.com" />
     <meta property="twitter:title" content="MateAG - Web Oficial" />
     <meta property="twitter:description" content="MateAG es un creador de contenido, desarrollador, programador, gamer, entre muchos. Contiene +2.000 seguidores sumando todas sus cifras de sus redes sociales oficiales..." />
     
-    <meta name="keywords" content="mateag, mate">
+    <meta name="keywords" content="mateag, heart">
     
     <link rel="icon" href="/assets/img/mate.png">
 
@@ -35,6 +35,7 @@
     <meta name="robots" content="noindex">
 </head>
 <body>
+    <div id="css-check" style="display: none;"></div>
     <header class="header">
         <a href="https://mateag.com" class="logo">MateAG</a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -69,5 +70,13 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/js/javascript.js"></script>
+    <script>
+        window.onload = function() {
+            const check = document.getElementById('css-check');
+            if (window.getComputedStyle(check).display !== 'none') {
+                window.location.href = "https://mateag.com/nocss";
+            }
+        };
+    </script>
 </body>
 </html>
